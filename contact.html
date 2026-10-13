@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Gokul</title>
+<meta name="description" content="Describe your project and get a plan, a fixed price and a timeline.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header"><div class="wrap bar">
+<a class="brand" href="index.html">Gokul</a>
+<button class="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" aria-label="Main"><a href="index.html">Home</a><a href="projects.html">Projects</a><a href="services.html">Services</a><a href="contact.html" aria-current="page">Contact</a></nav>
+</div></header>
+<main>
+
+<section class="wrap hero" style="padding-bottom:40px"><p class="eyebrow">Contact</p><h1>Tell me what you need fixed or built.</h1>
+<p class="lead">Send a short description, your deadline and your budget. I reply within 24 hours.</p></section>
+<section class="wrap" style="padding-bottom:72px"><div class="contact-grid">
+<form id="contact-form" method="POST">
+<label>Name<input name="name" type="text" required autocomplete="name"></label>
+<label>Email<input name="email" type="email" required autocomplete="email"></label>
+<label>I need help with<select name="topic"><option>Fixing or finishing a web app</option><option>Integration or automation</option><option>Dashboard or internal tool</option><option>3D product viewer</option><option>DSA and interview coaching</option><option>Something else</option></select></label>
+<label>Budget and deadline<input name="budget" type="text" placeholder="Optional"></label>
+<label>Message<textarea name="message" required></textarea></label>
+<input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button class="btn" type="submit">Send message</button>
+<p class="status" id="status" role="status" aria-live="polite"></p>
+</form>
+<div><h3>Other ways to reach me</h3><ul class="plain" style="list-style:none;padding:0;line-height:2">
+<li><a data-site="email" data-text href="#">Email</a></li>
+<li><a data-site="whatsapp" href="#">WhatsApp</a></li>
+<li><a data-site="linkedin" href="#">LinkedIn</a></li>
+<li><a data-site="github" href="#">GitHub</a></li></ul></div>
+</div></section>
+</main>
+<footer><div class="wrap"><span>&copy; <span id="year"></span> Gokul &middot; Coimbatore, Tamil Nadu, India</span>
+<span><a data-site="linkedin" href="#">LinkedIn</a> <a data-site="github" href="#">GitHub</a></span></div></footer>
+<script src="js/config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

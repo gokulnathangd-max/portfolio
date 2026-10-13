@@ -50,6 +50,24 @@
     });
   });
 
+  // --- React Bits: 3D Tilted Card on Terminal Showcase ---
+  var termCard = document.querySelector('.terminal-card');
+  if (termCard) {
+    termCard.addEventListener('mousemove', function(e){
+      var rect = termCard.getBoundingClientRect();
+      var x = e.clientX - rect.left;
+      var y = e.clientY - rect.top;
+      var cx = rect.width / 2;
+      var cy = rect.height / 2;
+      var rotX = ((y - cy) / cy) * -8;
+      var rotY = ((x - cx) / cx) * 8;
+      termCard.style.transform = 'perspective(1000px) rotateX(' + rotX.toFixed(2) + 'deg) rotateY(' + rotY.toFixed(2) + 'deg) translateY(-4px)';
+    });
+    termCard.addEventListener('mouseleave', function(){
+      termCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
+    });
+  }
+
   // --- React Bits: Magnetic Button Effect ---
   document.querySelectorAll('.btn:not(.ghost)').forEach(function(b){
     b.addEventListener('mousemove', function(e){
@@ -83,26 +101,96 @@
     }, 28);
   }
 
-  // --- React Bits: Click Spark Particle Effect ---
-  var canvas = document.createElement('canvas');
-  canvas.style.position = 'fixed';
-  canvas.style.top = '0';
-  canvas.style.left = '0';
-  canvas.style.width = '100vw';
-  canvas.style.height = '100vh';
-  canvas.style.pointerEvents = 'none';
-  canvas.style.zIndex = '99999';
-  document.body.appendChild(canvas);
+  // --- React Bits: Ambient Particle Background ---
+  var bgCanvas = document.createElement('canvas');
+  bgCanvas.style.position = 'fixed';
+  bgCanvas.style.top = '0';
+  bgCanvas.style.left = '0';
+  bgCanvas.style.width = '100vw';
+  bgCanvas.style.height = '100vh';
+  bgCanvas.style.pointerEvents = 'none';
+  bgCanvas.style.zIndex = '-1';
+  document.body.appendChild(bgCanvas);
 
-  var ctx = canvas.getContext('2d');
+  var bgCtx = bgCanvas.getContext('2d');
+  var particles = [];
+  var pCount = 35;
+
+  function resizeBg(){
+    bgCanvas.width = window.innerWidth;
+    bgCanvas.height = window.innerHeight;
+  }
+  resizeBg();
+  window.addEventListener('resize', resizeBg);
+
+  for (var p = 0; p < pCount; p++) {
+    particles.push({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+      vx: (Math.random() - 0.5) * 0.4,
+      vy: (Math.random() - 0.5) * 0.4,
+      size: Math.random() * 2 + 1,
+      alpha: Math.random() * 0.5 + 0.2
+    });
+  }
+
+  function renderBg(){
+    bgCtx.clearRect(0, 0, bgCanvas.width, bgCanvas.height);
+    for (var i = 0; i < particles.length; i++) {
+      var pt = particles[i];
+      pt.x += pt.vx;
+      pt.y += pt.vy;
+      if (pt.x < 0) pt.x = bgCanvas.width;
+      if (pt.x > bgCanvas.width) pt.x = 0;
+      if (pt.y < 0) pt.y = bgCanvas.height;
+      if (pt.y > bgCanvas.height) pt.y = 0;
+
+      bgCtx.beginPath();
+      bgCtx.arc(pt.x, pt.y, pt.size, 0, Math.PI * 2);
+      bgCtx.fillStyle = '#10B981';
+      bgCtx.globalAlpha = pt.alpha;
+      bgCtx.fill();
+
+      // Connect lines between nearby particles
+      for (var j = i + 1; j < particles.length; j++) {
+        var pt2 = particles[j];
+        var dist = Math.hypot(pt.x - pt2.x, pt.y - pt2.y);
+        if (dist < 130) {
+          bgCtx.beginPath();
+          bgCtx.moveTo(pt.x, pt.y);
+          bgCtx.lineTo(pt2.x, pt2.y);
+          bgCtx.strokeStyle = '#10B981';
+          bgCtx.globalAlpha = (1 - dist / 130) * 0.15;
+          bgCtx.lineWidth = 0.8;
+          bgCtx.stroke();
+        }
+      }
+    }
+    bgCtx.globalAlpha = 1;
+    requestAnimationFrame(renderBg);
+  }
+  renderBg();
+
+  // --- React Bits: Click Spark Particle Effect ---
+  var sparkCanvas = document.createElement('canvas');
+  sparkCanvas.style.position = 'fixed';
+  sparkCanvas.style.top = '0';
+  sparkCanvas.style.left = '0';
+  sparkCanvas.style.width = '100vw';
+  sparkCanvas.style.height = '100vh';
+  sparkCanvas.style.pointerEvents = 'none';
+  sparkCanvas.style.zIndex = '99999';
+  document.body.appendChild(sparkCanvas);
+
+  var sCtx = sparkCanvas.getContext('2d');
   var sparks = [];
 
-  function resizeCanvas(){
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+  function resizeSparkCanvas(){
+    sparkCanvas.width = window.innerWidth;
+    sparkCanvas.height = window.innerHeight;
   }
-  resizeCanvas();
-  window.addEventListener('resize', resizeCanvas);
+  resizeSparkCanvas();
+  window.addEventListener('resize', resizeSparkCanvas);
 
   window.addEventListener('click', function(e){
     for (var i = 0; i < 8; i++) {
@@ -115,13 +203,13 @@
         vy: Math.sin(angle) * speed,
         size: Math.random() * 3 + 2,
         alpha: 1,
-        color: Math.random() > 0.4 ? '#0D9488' : '#0284C7'
+        color: Math.random() > 0.4 ? '#34D399' : '#38BDF8'
       });
     }
   });
 
   function animateSparks(){
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    sCtx.clearRect(0, 0, sparkCanvas.width, sparkCanvas.height);
     for (var i = sparks.length - 1; i >= 0; i--) {
       var p = sparks[i];
       p.x += p.vx;
@@ -131,13 +219,13 @@
         sparks.splice(i, 1);
         continue;
       }
-      ctx.beginPath();
-      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-      ctx.fillStyle = p.color;
-      ctx.globalAlpha = p.alpha;
-      ctx.fill();
+      sCtx.beginPath();
+      sCtx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+      sCtx.fillStyle = p.color;
+      sCtx.globalAlpha = p.alpha;
+      sCtx.fill();
     }
-    ctx.globalAlpha = 1;
+    sCtx.globalAlpha = 1;
     requestAnimationFrame(animateSparks);
   }
   animateSparks();

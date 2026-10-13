@@ -12,6 +12,12 @@
     else { el.href = v; }
     el.classList.add('on');
   });
+  document.querySelectorAll('.stack').forEach(function(el){
+    if (el.children.length === 0) {
+      var tags = el.textContent.split('·').map(function(t){ return t.trim(); }).filter(Boolean);
+      el.innerHTML = tags.map(function(t){ return '<span class="pill">' + t + '</span>'; }).join('');
+    }
+  });
   var form = document.getElementById('contact-form'); if (!form) return;
   var status = document.getElementById('status');
   if (!s.formAction) { status.textContent = 'The form is not connected yet. Please use the contact links on this page.'; return; }

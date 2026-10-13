@@ -3,94 +3,164 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Gokul | Full-stack developer and DSA coach</title>
+<title>Gokul | Full-stack developer & Cyber Security</title>
 <meta name="description" content="Full-stack developer and DSA coach. I build, fix and finish web apps on a fixed price and deadline.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700;800&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="site-header"><div class="wrap bar">
-<a class="brand" href="index.html">Gokul</a>
-<button class="menu" aria-expanded="false" aria-controls="nav">Menu</button>
-<nav id="nav" aria-label="Main"><a href="index.html" aria-current="page">Home</a><a href="projects.html">Projects</a><a href="services.html">Services</a><a href="contact.html">Contact</a></nav>
-</div></header>
-<main>
 
-<section class="wrap hero hero-split">
-<div class="hero-content">
-<div class="status-badge"><span class="status-dot"></span> Available for projects &amp; coaching</div>
-<p class="eyebrow">Full-stack developer &middot; Cyber Security</p>
-<h1>I build, fix and scale web apps on a <span class="gradient-text">fixed price &amp; deadline</span>.</h1>
-<p class="lead">Computer Science student (Cyber Security) in Coimbatore, India, engineering production-ready web apps with React, Spring Boot, FastAPI and MySQL.</p>
-<div class="actions">
-<a class="btn" href="contact.html">Describe your project</a>
-<a class="btn ghost" href="projects.html">Explore work</a>
-</div>
-<div class="hero-tech-strip">
-<span class="tech-tag">React.js</span>
-<span class="tech-tag">Spring Boot</span>
-<span class="tech-tag">FastAPI</span>
-<span class="tech-tag">MySQL</span>
-<span class="tech-tag">Three.js</span>
-<span class="tech-tag">Cyber Security</span>
-</div>
-</div>
-<div class="hero-visual">
-<div class="terminal-card card">
-<div class="terminal-header">
-<div class="terminal-dots">
-<span class="dot red"></span>
-<span class="dot yellow"></span>
-<span class="dot green"></span>
-</div>
-<span class="terminal-title">gokul@security-lab:~</span>
-<span class="terminal-badge">LIVE</span>
-</div>
-<div class="terminal-body">
-<p class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">whoami</span></p>
-<p class="term-out">Gokulnathan B &mdash; Full-Stack &amp; Cybersec Engineer</p>
-<p class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">cat active_stack.json</span></p>
-<pre class="term-code">{
-  "frontend": ["React", "Three.js", "TypeScript"],
-  "backend":  ["Spring Boot", "FastAPI"],
-  "database": ["MySQL", "Prisma"],
-  "focus":    "MSME 5.0 National Competitor"
-}</pre>
-<p class="term-line"><span class="term-prompt">$</span> <span class="term-cmd">status --all</span></p>
-<p class="term-out status-ok">&check; 100% Fixed-Price &amp; Deadline</p>
-<p class="term-out status-ok">&check; Replies within 24 Hours</p>
-</div>
-</div>
-</div>
-</section>
-<section class="block alt"><div class="wrap">
-<h2>What I do</h2>
-<div class="grid">
-<div class="card"><h3>Fix and finish web apps</h3><p>Bugs fixed and missing features shipped, tested before delivery.</p></div>
-<div class="card"><h3>Integrations and dashboards</h3><p>Connect your tools through APIs and replace messy spreadsheets with a web dashboard.</p></div>
-<div class="card"><h3>DSA and interview coaching</h3><p>An 8-week, pattern-based program with mock interviews and written feedback.</p></div>
-</div>
-<div class="actions"><a class="btn ghost" href="services.html">All services</a></div>
-</div></section>
-<section class="block"><div class="wrap">
-<h2>Featured project</h2>
-<div class="card"><p class="tag">Full-stack marketplace</p><h3>HillCoast Connect</h3>
-<p>A marketplace for Tamil Nadu farmers, fishermen and artisans, presented at the MSME 5.0 National Competition.</p>
-<p class="stack">Spring Boot &middot; React.js &middot; MySQL &middot; Google Maps API</p>
-<a class="more" href="projects.html">More projects</a></div>
-</div></section>
-<section class="block alt"><div class="wrap">
-<h2>Background</h2>
-<div class="grid">
-<div><h3>Education</h3><p>BE Computer Science and Engineering (Cyber Security), Sri Krishna College of Engineering and Technology, Coimbatore. Graduating 2028.</p></div>
-<div><h3>Certifications</h3><ul class="plain"><li>NPTEL Cybersecurity (IIT Bombay)</li><li>AWS Cloud Practitioner Essentials</li></ul></div>
-<div><h3>Languages</h3><p>English and Tamil.</p></div>
-</div>
-</div></section>
+<header class="site-header">
+  <div class="nav-dock">
+    <a class="brand" href="index.html">Gokul<span class="dot"></span></a>
+    <nav id="nav" aria-label="Main">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="dock-cta" href="contact.html">Get a quote</a>
+    <button class="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+  </div>
+</header>
+
+<main>
+  <!-- React Bits Signature Centered Hero -->
+  <section class="hero-centered">
+    <div class="hero-badge">
+      <span class="badge-dot"></span>
+      <span>Available for projects &amp; coaching</span>
+    </div>
+
+    <h1 class="hero-title">
+      I build, fix and finish web apps<br>
+      <span class="gradient-text">on a fixed price &amp; deadline.</span>
+    </h1>
+
+    <p class="hero-sub">
+      Computer Science student (Cyber Security) in Coimbatore, India.<br>
+      Shipping production-ready React, Spring Boot, FastAPI, and MySQL web apps for clients worldwide.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn-primary" href="contact.html">Describe your project &rarr;</a>
+      <a class="btn-secondary" href="projects.html">See selected work</a>
+    </div>
+
+    <div class="hero-pills">
+      <span class="pill">React.js</span>
+      <span class="pill">Spring Boot</span>
+      <span class="pill">FastAPI</span>
+      <span class="pill">MySQL</span>
+      <span class="pill">Three.js</span>
+      <span class="pill">Cyber Security</span>
+    </div>
+  </section>
+
+  <!-- React Bits Bento Grid Showcase -->
+  <section class="wrap bento-section">
+    <div class="section-header">
+      <p class="section-tag">Selected Work</p>
+      <h2>Built with precision and delivered on time.</h2>
+    </div>
+
+    <div class="bento-grid">
+      <!-- Big Bento Card: HillCoast Connect -->
+      <article class="bento-card bento-wide">
+        <span class="bento-badge">Featured &middot; MSME 5.0 National</span>
+        <h3>HillCoast Connect</h3>
+        <p class="bento-desc">A full-stack rural marketplace empowering Tamil Nadu farmers, fishermen and artisans to sell directly to consumers with map-based discovery. Presented at the MSME 5.0 National Competition.</p>
+        <div class="stack">
+          <span class="pill">Spring Boot</span>
+          <span class="pill">React.js</span>
+          <span class="pill">MySQL</span>
+          <span class="pill">Google Maps API</span>
+        </div>
+        <a class="more" data-site="hillcoast" href="#">View on GitHub &rarr;</a>
+      </article>
+
+      <!-- Right Top: Agri-Twin -->
+      <article class="bento-card">
+        <span class="bento-badge">In Progress &middot; IoT &amp; AI</span>
+        <h3>Agri-Twin</h3>
+        <p class="bento-desc">A predictive 3D digital twin platform preventing post-harvest crop spoilage with ArUco marker computer vision &amp; Three.js 3D heatmaps.</p>
+        <div class="stack">
+          <span class="pill">Fastify</span>
+          <span class="pill">React</span>
+          <span class="pill">Three.js</span>
+        </div>
+        <a class="more" data-site="agritwin" href="#">View project &rarr;</a>
+      </article>
+
+      <!-- Right Bottom: Services Snapshot -->
+      <article class="bento-card">
+        <span class="bento-badge">Client Work</span>
+        <h3>Fix, Finish &amp; Ship</h3>
+        <p class="bento-desc">Bugs solved, features added, and APIs integrated with clean code and strict delivery guarantees.</p>
+        <div class="bento-stats">
+          <div class="stat"><span class="stat-num">&lt;24h</span><span class="stat-label">Response</span></div>
+          <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Fixed Price</span></div>
+          <div class="stat"><span class="stat-num">Tested</span><span class="stat-label">Delivery</span></div>
+        </div>
+        <a class="more" href="services.html">Explore all services &rarr;</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- DSA Coaching Banner -->
+  <section class="wrap block-section">
+    <div class="dsa-banner">
+      <div class="dsa-content">
+        <span class="bento-badge">8-Week Program</span>
+        <h2>DSA &amp; Coding Interview Coaching</h2>
+        <p>A structured, pattern-based curriculum focused on deep problem-solving intuition rather than memorizing solutions. Taught in English or Tamil with 1-on-1 mock interviews.</p>
+        <a class="btn-primary" href="contact.html">Book a diagnostic &rarr;</a>
+      </div>
+      <div class="dsa-topics">
+        <span class="topic-tag">Sliding Window</span>
+        <span class="topic-tag">Two Pointers</span>
+        <span class="topic-tag">Binary Search</span>
+        <span class="topic-tag">Trees &amp; Graphs</span>
+        <span class="topic-tag">Dynamic Programming</span>
+        <span class="topic-tag">Mock Interviews</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Background Section -->
+  <section class="wrap block-section">
+    <div class="section-header">
+      <p class="section-tag">Credentials</p>
+      <h2>Background &amp; Education</h2>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <span class="tag">Education</span>
+        <h3>BE Computer Science (Cyber Security)</h3>
+        <p>Sri Krishna College of Engineering and Technology, Coimbatore. Graduating 2028.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Certifications</span>
+        <h3>Industry Certified</h3>
+        <p>NPTEL Cybersecurity (IIT Bombay)<br>AWS Cloud Practitioner Essentials</p>
+      </div>
+      <div class="card">
+        <span class="tag">Languages</span>
+        <h3>Fluent Communication</h3>
+        <p>English and Tamil. Comfortable working with clients and teams across different timezones.</p>
+      </div>
+    </div>
+  </section>
 </main>
-<footer><div class="wrap"><span>&copy; <span id="year"></span> Gokul &middot; Coimbatore, Tamil Nadu, India</span>
-<span><a data-site="linkedin" href="#">LinkedIn</a> <a data-site="github" href="#">GitHub</a></span></div></footer>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="year"></span> Gokul &middot; Coimbatore, Tamil Nadu, India</span>
+    <span><a data-site="linkedin" href="#">LinkedIn</a> &middot; <a data-site="github" href="#">GitHub</a></span>
+  </div>
+</footer>
+
 <script src="js/config.js"></script>
 <script src="js/main.js"></script>
 </body>

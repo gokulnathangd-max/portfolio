@@ -6,38 +6,99 @@
 <title>Services | Gokul</title>
 <meta name="description" content="Web app fixes, integrations, dashboards, 3D viewers and DSA interview coaching.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700;800&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="site-header"><div class="wrap bar">
-<a class="brand" href="index.html">Gokul</a>
-<button class="menu" aria-expanded="false" aria-controls="nav">Menu</button>
-<nav id="nav" aria-label="Main"><a href="index.html">Home</a><a href="projects.html">Projects</a><a href="services.html" aria-current="page">Services</a><a href="contact.html">Contact</a></nav>
-</div></header>
-<main>
 
-<section class="wrap hero" style="padding-bottom:40px"><p class="eyebrow">Services</p><h1>Clear scope, <span class="gradient-text">fixed price, fixed deadline</span>.</h1></section>
-<section class="wrap" style="padding-bottom:72px"><div class="grid">
-<div class="card"><h3>Fix and finish web apps</h3><p>Bug fixes and new features in React, Spring Boot and Python apps.</p></div>
-<div class="card"><h3>Integrations and automation</h3><p>Connect forms, spreadsheets, stores and other tools through their APIs.</p></div>
-<div class="card"><h3>Dashboards and internal tools</h3><p>Web dashboards with logins and reports, backed by MySQL.</p></div>
-<div class="card"><h3>3D product viewers</h3><p>Interactive 3D views for product pages, built with Three.js.</p></div>
-</div></section>
-<section class="block"><div class="wrap">
-<h2>How a project works</h2>
-<ol class="steps"><li>You describe the problem on the contact page.</li><li>I reply with a plan, a fixed price and a deadline.</li><li>You approve, and I start. You get regular updates.</li><li>I test, deliver and explain how to use it.</li></ol>
-<div class="actions"><a class="btn" href="contact.html">Get a quote</a></div>
-</div></section>
-<section class="wrap" style="padding-bottom:72px"><div class="dark">
-<h2>DSA and coding interview coaching</h2>
-<p>An 8-week program built on patterns, not memorized answers. It starts with a short diagnostic where you solve two problems aloud, followed by a written summary of your weak areas and a clear plan.</p>
-<p>Topics: arrays and strings, hashing, two pointers, sliding window, linked lists, stacks and queues, binary search, trees, graphs, recursion, dynamic programming and mock interviews. Taught in English or Tamil.</p>
-<a class="btn" style="background:#fff;color:#12201C;border-color:#fff" href="contact.html">Book a diagnostic</a>
-</div></section>
+<header class="site-header">
+  <div class="nav-dock">
+    <a class="brand" href="index.html">Gokul<span class="dot"></span></a>
+    <nav id="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="services.html" aria-current="page">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="dock-cta" href="contact.html">Get a quote</a>
+    <button class="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero-centered" style="padding-bottom: 48px">
+    <p class="section-tag">Services &amp; Pricing</p>
+    <h1 class="hero-title">Clear scope, <span class="gradient-text">fixed price &amp; deadline</span>.</h1>
+    <p class="hero-sub">Direct collaboration with transparent timelines. No hourly surprises or scope creep.</p>
+  </section>
+
+  <section class="wrap block-section">
+    <div class="grid">
+      <div class="card">
+        <span class="tag">Development</span>
+        <h3>Fix &amp; Finish Web Apps</h3>
+        <p>Resolve tricky bugs, finish half-built features, and polish frontend/backend workflows in React, Spring Boot, or Python.</p>
+      </div>
+      <div class="card">
+        <span class="tag">APIs</span>
+        <h3>Integrations &amp; Automation</h3>
+        <p>Connect payment gateways, Google Maps, webhooks, forms, and third-party tools directly into your system.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Database</span>
+        <h3>Dashboards &amp; Internal Tools</h3>
+        <p>Custom administrative dashboards with authenticated logins, real-time metrics, and reliable MySQL queries.</p>
+      </div>
+      <div class="card">
+        <span class="tag">Interactive 3D</span>
+        <h3>3D Web &amp; Product Viewers</h3>
+        <p>Interactive 3D canvas experiences and product viewers built using Three.js and WebGL.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap block-section">
+    <div class="section-header">
+      <p class="section-tag">Workflow</p>
+      <h2>How a project works</h2>
+    </div>
+    <ol class="steps">
+      <li>Describe your project goals and requirements via the contact page.</li>
+      <li>I evaluate the scope and reply within 24 hours with a transparent plan, fixed price, and deadline.</li>
+      <li>Upon your approval, development starts with frequent milestone updates.</li>
+      <li>Thorough end-to-end testing, final delivery, and code handover.</li>
+    </ol>
+    <div style="margin-top: 32px">
+      <a class="btn-primary" href="contact.html">Request a quote &rarr;</a>
+    </div>
+  </section>
+
+  <section class="wrap block-section">
+    <div class="dsa-banner">
+      <div class="dsa-content">
+        <span class="bento-badge">8-Week Program</span>
+        <h2>DSA &amp; Interview Coaching</h2>
+        <p>Pattern-based technical coaching designed to build genuine problem-solving speed. Starts with a diagnostic session and includes targeted homework and 1-on-1 mock interviews.</p>
+        <a class="btn-primary" href="contact.html">Book a diagnostic &rarr;</a>
+      </div>
+      <div class="dsa-topics">
+        <span class="topic-tag">Sliding Window</span>
+        <span class="topic-tag">Two Pointers</span>
+        <span class="topic-tag">Binary Search</span>
+        <span class="topic-tag">Trees &amp; Graphs</span>
+        <span class="topic-tag">Dynamic Programming</span>
+      </div>
+    </div>
+  </section>
 </main>
-<footer><div class="wrap"><span>&copy; <span id="year"></span> Gokul &middot; Coimbatore, Tamil Nadu, India</span>
-<span><a data-site="linkedin" href="#">LinkedIn</a> <a data-site="github" href="#">GitHub</a></span></div></footer>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="year"></span> Gokul &middot; Coimbatore, Tamil Nadu, India</span>
+    <span><a data-site="linkedin" href="#">LinkedIn</a> &middot; <a data-site="github" href="#">GitHub</a></span>
+  </div>
+</footer>
+
 <script src="js/config.js"></script>
 <script src="js/main.js"></script>
 </body>

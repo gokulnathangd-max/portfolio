@@ -6,36 +6,84 @@
 <title>Projects | Gokul</title>
 <meta name="description" content="Selected projects: HillCoast Connect, Agri-Twin and WeaveLink.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700;800&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="site-header"><div class="wrap bar">
-<a class="brand" href="index.html">Gokul</a>
-<button class="menu" aria-expanded="false" aria-controls="nav">Menu</button>
-<nav id="nav" aria-label="Main"><a href="index.html">Home</a><a href="projects.html" aria-current="page">Projects</a><a href="services.html">Services</a><a href="contact.html">Contact</a></nav>
-</div></header>
-<main>
 
-<section class="wrap hero" style="padding-bottom:40px"><p class="eyebrow">Projects</p><h1>Selected <span class="gradient-text">work</span></h1></section>
-<section class="wrap" style="padding-bottom:72px"><div class="grid">
-<article class="card"><p class="tag">Full-stack marketplace</p><h3>HillCoast Connect</h3>
-<p>A marketplace for Tamil Nadu farmers, fishermen and artisans to sell directly, with map-based discovery. Presented at the MSME 5.0 National Competition.</p>
-<p class="stack">Spring Boot &middot; React.js &middot; MySQL &middot; Google Maps API</p>
-<a class="more" data-site="hillcoast" href="#">View project</a></article>
-<article class="card"><p class="tag">In progress</p><h3>Agri-Twin</h3>
-<p>A predictive 3D digital twin platform to reduce post-harvest losses in agriculture, with a computer vision phase using ArUco marker detection and 3D reconstruction.</p>
-<p class="stack">Fastify &middot; TypeScript &middot; React &middot; Three.js</p>
-<a class="more" data-site="agritwin" href="#">View project</a></article>
-<article class="card"><p class="tag">Ideathon concept</p><h3>WeaveLink</h3>
-<p>A marketplace concept connecting Tamil Nadu handloom and powerloom weavers directly to buyers, using GI-tag QR codes to verify authenticity.</p>
-<p class="stack">Concept and pitch</p></article>
-</div>
-<div class="actions"><a class="btn" href="contact.html">Start a project with me</a></div>
-</section>
+<header class="site-header">
+  <div class="nav-dock">
+    <a class="brand" href="index.html">Gokul<span class="dot"></span></a>
+    <nav id="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="dock-cta" href="contact.html">Get a quote</a>
+    <button class="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero-centered" style="padding-bottom: 48px">
+    <p class="section-tag">Portfolio</p>
+    <h1 class="hero-title">Selected <span class="gradient-text">Projects</span></h1>
+    <p class="hero-sub">Production web applications, IoT platforms, and innovative prototypes built with modern full-stack architectures.</p>
+  </section>
+
+  <section class="wrap block-section">
+    <div class="grid">
+      <article class="card">
+        <span class="tag">Full-stack marketplace</span>
+        <h3>HillCoast Connect</h3>
+        <p>A marketplace for Tamil Nadu farmers, fishermen and artisans to sell directly, with map-based discovery. Presented at the MSME 5.0 National Competition.</p>
+        <div class="stack">
+          <span class="pill">Spring Boot</span>
+          <span class="pill">React.js</span>
+          <span class="pill">MySQL</span>
+          <span class="pill">Google Maps API</span>
+        </div>
+        <a class="more" data-site="hillcoast" href="#">View on GitHub &rarr;</a>
+      </article>
+
+      <article class="card">
+        <span class="tag">In progress</span>
+        <h3>Agri-Twin</h3>
+        <p>A predictive 3D digital twin platform to reduce post-harvest losses in agriculture, with computer vision ArUco marker detection and 3D reconstruction.</p>
+        <div class="stack">
+          <span class="pill">Fastify</span>
+          <span class="pill">TypeScript</span>
+          <span class="pill">React</span>
+          <span class="pill">Three.js</span>
+        </div>
+        <a class="more" data-site="agritwin" href="#">View project &rarr;</a>
+      </article>
+
+      <article class="card">
+        <span class="tag">Ideathon concept</span>
+        <h3>WeaveLink</h3>
+        <p>A marketplace concept connecting Tamil Nadu handloom and powerloom weavers directly to buyers, using GI-tag QR codes to verify authenticity.</p>
+        <div class="stack">
+          <span class="pill">Flutter</span>
+          <span class="pill">Concept &amp; Pitch</span>
+        </div>
+      </article>
+    </div>
+
+    <div style="text-align:center;margin-top:48px">
+      <a class="btn-primary" href="contact.html">Start a project with me &rarr;</a>
+    </div>
+  </section>
 </main>
-<footer><div class="wrap"><span>&copy; <span id="year"></span> Gokul &middot; Coimbatore, Tamil Nadu, India</span>
-<span><a data-site="linkedin" href="#">LinkedIn</a> <a data-site="github" href="#">GitHub</a></span></div></footer>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="year"></span> Gokul &middot; Coimbatore, Tamil Nadu, India</span>
+    <span><a data-site="linkedin" href="#">LinkedIn</a> &middot; <a data-site="github" href="#">GitHub</a></span>
+  </div>
+</footer>
+
 <script src="js/config.js"></script>
 <script src="js/main.js"></script>
 </body>

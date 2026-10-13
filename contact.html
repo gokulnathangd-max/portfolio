@@ -6,39 +6,83 @@
 <title>Contact | Gokul</title>
 <meta name="description" content="Describe your project and get a plan, a fixed price and a timeline.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Space+Grotesk:wght@500;700;800&display=swap">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header class="site-header"><div class="wrap bar">
-<a class="brand" href="index.html">Gokul</a>
-<button class="menu" aria-expanded="false" aria-controls="nav">Menu</button>
-<nav id="nav" aria-label="Main"><a href="index.html">Home</a><a href="projects.html">Projects</a><a href="services.html">Services</a><a href="contact.html" aria-current="page">Contact</a></nav>
-</div></header>
-<main>
 
-<section class="wrap hero" style="padding-bottom:40px"><p class="eyebrow">Contact</p><h1>Tell me what you need <span class="gradient-text">fixed or built</span>.</h1>
-<p class="lead">Send a short description, your deadline and your budget. I reply within 24 hours.</p></section>
-<section class="wrap" style="padding-bottom:72px"><div class="contact-grid">
-<form id="contact-form" method="POST">
-<label>Name<input name="name" type="text" required autocomplete="name"></label>
-<label>Email<input name="email" type="email" required autocomplete="email"></label>
-<label>I need help with<select name="topic"><option>Fixing or finishing a web app</option><option>Integration or automation</option><option>Dashboard or internal tool</option><option>3D product viewer</option><option>DSA and interview coaching</option><option>Something else</option></select></label>
-<label>Budget and deadline<input name="budget" type="text" placeholder="Optional"></label>
-<label>Message<textarea name="message" required></textarea></label>
-<input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
-<button class="btn" type="submit">Send message</button>
-<p class="status" id="status" role="status" aria-live="polite"></p>
-</form>
-<div><h3>Other ways to reach me</h3><ul class="plain" style="list-style:none;padding:0;line-height:2">
-<li><a data-site="email" data-text href="#">Email</a></li>
-<li><a data-site="whatsapp" href="#">WhatsApp</a></li>
-<li><a data-site="linkedin" href="#">LinkedIn</a></li>
-<li><a data-site="github" href="#">GitHub</a></li></ul></div>
-</div></section>
+<header class="site-header">
+  <div class="nav-dock">
+    <a class="brand" href="index.html">Gokul<span class="dot"></span></a>
+    <nav id="nav" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <a class="dock-cta" href="contact.html">Get in touch</a>
+    <button class="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero-centered" style="padding-bottom: 48px">
+    <p class="section-tag">Get in touch</p>
+    <h1 class="hero-title">Tell me what you need <span class="gradient-text">built or fixed</span>.</h1>
+    <p class="hero-sub">Send a short description, your timeline and your budget. I reply within 24 hours.</p>
+  </section>
+
+  <section class="wrap block-section">
+    <div class="contact-grid">
+      <form id="contact-form" method="POST">
+        <label>Name
+          <input name="name" type="text" required autocomplete="name" placeholder="Your name">
+        </label>
+        <label>Email
+          <input name="email" type="email" required autocomplete="email" placeholder="you@domain.com">
+        </label>
+        <label>I need help with
+          <select name="topic">
+            <option>Fixing or finishing a web app</option>
+            <option>Integration or automation</option>
+            <option>Dashboard or internal tool</option>
+            <option>3D product viewer</option>
+            <option>DSA and interview coaching</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label>Budget and deadline
+          <input name="budget" type="text" placeholder="e.g. ₹15,000 / 2 weeks">
+        </label>
+        <label>Message
+          <textarea name="message" required placeholder="Tell me about your project..."></textarea>
+        </label>
+        <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <button class="btn-primary" type="submit">Send message &rarr;</button>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </form>
+
+      <div>
+        <h3 style="font-size:22px;margin-bottom:20px;color:#fff">Direct Contact</h3>
+        <p style="color:var(--ink-muted);margin-bottom:24px">Prefer to connect directly? Reach out through any of these channels:</p>
+        <ul style="list-style:none;padding:0;display:grid;gap:14px">
+          <li><a data-site="email" data-text href="#" style="display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:500">&rarr; Email</a></li>
+          <li><a data-site="whatsapp" href="#" style="display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:500">&rarr; WhatsApp</a></li>
+          <li><a data-site="linkedin" href="#" style="display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:500">&rarr; LinkedIn</a></li>
+          <li><a data-site="github" href="#" style="display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:500">&rarr; GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </main>
-<footer><div class="wrap"><span>&copy; <span id="year"></span> Gokul &middot; Coimbatore, Tamil Nadu, India</span>
-<span><a data-site="linkedin" href="#">LinkedIn</a> <a data-site="github" href="#">GitHub</a></span></div></footer>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="year"></span> Gokul &middot; Coimbatore, Tamil Nadu, India</span>
+    <span><a data-site="linkedin" href="#">LinkedIn</a> &middot; <a data-site="github" href="#">GitHub</a></span>
+  </div>
+</footer>
+
 <script src="js/config.js"></script>
 <script src="js/main.js"></script>
 </body>

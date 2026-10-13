@@ -38,7 +38,7 @@
   });
 
   // --- React Bits: Spotlight Card Effect ---
-  document.querySelectorAll('.card').forEach(function(card){
+  document.querySelectorAll('.card, .bento-card, .dsa-banner').forEach(function(card){
     card.addEventListener('mousemove', function(e){
       var rect = card.getBoundingClientRect();
       card.style.setProperty('--mouse-x', (e.clientX - rect.left) + 'px');
@@ -50,31 +50,13 @@
     });
   });
 
-  // --- React Bits: 3D Tilted Card on Terminal Showcase ---
-  var termCard = document.querySelector('.terminal-card');
-  if (termCard) {
-    termCard.addEventListener('mousemove', function(e){
-      var rect = termCard.getBoundingClientRect();
-      var x = e.clientX - rect.left;
-      var y = e.clientY - rect.top;
-      var cx = rect.width / 2;
-      var cy = rect.height / 2;
-      var rotX = ((y - cy) / cy) * -8;
-      var rotY = ((x - cx) / cx) * 8;
-      termCard.style.transform = 'perspective(1000px) rotateX(' + rotX.toFixed(2) + 'deg) rotateY(' + rotY.toFixed(2) + 'deg) translateY(-4px)';
-    });
-    termCard.addEventListener('mouseleave', function(){
-      termCard.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)';
-    });
-  }
-
   // --- React Bits: Magnetic Button Effect ---
-  document.querySelectorAll('.btn:not(.ghost)').forEach(function(b){
+  document.querySelectorAll('.btn-primary, .btn-secondary, .dock-cta').forEach(function(b){
     b.addEventListener('mousemove', function(e){
       var rect = b.getBoundingClientRect();
       var x = e.clientX - rect.left - rect.width / 2;
       var y = e.clientY - rect.top - rect.height / 2;
-      b.style.transform = 'translate(' + (x * 0.22) + 'px, ' + (y * 0.22) + 'px)';
+      b.style.transform = 'translate(' + (x * 0.18) + 'px, ' + (y * 0.18) + 'px)';
     });
     b.addEventListener('mouseleave', function(){
       b.style.transform = 'translate(0px, 0px)';
